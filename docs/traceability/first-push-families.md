@@ -1,14 +1,13 @@
 # First push families
 
-This repository is scaffold-only for the Objective-C HorizonLanguage target. It contains baseline coordination files only. No deterministic runtime validation is claimed.
+This local tranche ports the deterministic family-focus contract from the C-family small-runtime pattern into Objective-C.
 
-## Horizon target
+| Family group | Objective-C path | Source reference | Parity class |
+| --- | --- | --- | --- |
+| classic-six | `src/main.m` | `c-stakeholder/src/main.c` family registry and CLI shape | dedicated |
+| modern-core | `src/main.m` | `c-stakeholder/src/main.c` family registry and CLI shape | dedicated |
+| later families | `src/main.m` | `c-stakeholder/src/main.c` grouped fallback shape | grouped fallback |
+| CLI contract | `src/main.m`, `tests/test_cli.sh` | `c-stakeholder/tests/test_cli.sh` smoke contract | deterministic |
+| experimental provider | `src/main.m`, `tests/test_cli.sh` | fail-fast provider policy in current deterministic repos | explicit fail-fast |
 
-- Language id: objective-c
-- Display name: Objective-C
-- Horizon status: reserve-next20
-- Target class: parity-target
-- Repository: objective-c-stakeholder
-## Scaffold scope
-
-Traceability status: scaffold-only. First-push family ownership, source audit rows, fixture requirements, and deterministic validation evidence must be supplied before implementation claims.
+Rust and Java remain canonical behavioral anchors; this Objective-C tranche is local-only and native-validated.

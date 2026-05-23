@@ -1,14 +1,11 @@
 # Toolchain
 
-This repository is scaffold-only for the Objective-C HorizonLanguage target. It contains baseline coordination files only. No deterministic runtime validation is claimed.
+Objective-C native validation uses Apple clang on arm64 macOS.
 
-## Horizon target
+## Proven commands
 
-- Language id: objective-c
-- Display name: Objective-C
-- Horizon status: reserve-next20
-- Target class: parity-target
-- Repository: objective-c-stakeholder
-## Scaffold scope
+- `clang --version`
+- `make compiler-proof`
+- `make test`
 
-Toolchain status: scaffold-only. No compiler, interpreter, formatter, package manager, test runner, or deterministic runtime validation has been selected or proven.
+No Homebrew, Docker, Nix, Cocoa/Foundation, or package-manager dependency is required for the current deterministic first tranche.
