@@ -1,6 +1,6 @@
 # Toolchain
 
-Objective-C native validation uses Apple clang on arm64 macOS.
+Objective-C native validation uses Apple clang and Foundation on arm64 macOS.
 
 ## Proven commands
 
@@ -8,4 +8,4 @@ Objective-C native validation uses Apple clang on arm64 macOS.
 - `make compiler-proof`
 - `make test`
 
-No Homebrew, Docker, Nix, Cocoa/Foundation, or package-manager dependency is required for the current deterministic first tranche.
+No Homebrew, Docker, Nix, or package-manager dependency is required. Foundation is linked from the native Apple SDK for the current deterministic first tranche.

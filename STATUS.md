@@ -4,7 +4,7 @@
 - Phase state: native-validated local tranche
 - Program state: local deterministic widening
 - Publication state: local only, no upstream tracking, no push
-- Current implementation: single-file Objective-C `.m` runtime using Apple clang without Foundation or package-manager dependencies
+- Current implementation: single-file Objective-C `.m` runtime using `NSString`, `NSArray`, `NSDictionary`, `NSNumber`, `NSNull`, `NSJSONSerialization`, and ``
 
 ## Evidence
 

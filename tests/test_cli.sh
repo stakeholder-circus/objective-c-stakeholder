@@ -28,6 +28,7 @@ assert_contains "$TMP_DIR/list-values.json" '"experimental-provider"'
 assert_contains "$TMP_DIR/code.json" '"family":"code_analyzer"'
 assert_contains "$TMP_DIR/code.json" '"rendererKey":"classic-six.code_analyzer"'
 assert_contains "$TMP_DIR/code.json" '"sourceRepo":"objective-c-stakeholder"'
+assert_contains "$TMP_DIR/code.json" '"foundationProfile":"nsstring-nsarray-nsdictionary-nsjsonserialization"'
 
 "$BIN" --output-format json --focus-family platform-engineering --seed 8675309 > "$TMP_DIR/seed-a.json"
 "$BIN" --output-format json --focus-family platform-engineering --seed 8675309 > "$TMP_DIR/seed-b.json"

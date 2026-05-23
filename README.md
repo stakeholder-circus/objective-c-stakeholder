@@ -3,11 +3,11 @@
 
 # objective-c-stakeholder
 
-Objective-C implementation of the stakeholder deterministic first tranche.
+Objective-C Foundation implementation of the stakeholder deterministic first tranche.
 
 ## Current tranche
 
-- Full dedicated `classic-six + modern-core` generator families.
+- Foundation-backed full dedicated `classic-six + modern-core` generator families.
 - Grouped fallback for later generator families.
 - Deterministic normalized JSON with same-seed stability.
 - `--list-values`, `--focus-family`, `--output-format`, `--seed`, and explicit `--experimental-provider` fail-fast.
@@ -21,4 +21,4 @@ Objective-C implementation of the stakeholder deterministic first tranche.
 - `./build/objective-c-stakeholder --list-values`
 - `./build/objective-c-stakeholder --output-format json --focus-family code_analyzer --seed 123`
 
-Docker is intentionally not used in this M1-safe pass; native Apple clang is the validation lane.
+Docker is intentionally not used in this M1-safe pass; native Apple clang plus full Foundation is the validation lane.

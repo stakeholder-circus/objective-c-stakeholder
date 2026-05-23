@@ -32,7 +32,7 @@ def main() -> int:
         for path in missing:
             print(f"missing Objective-C deterministic tranche file: {path}")
         return 1
-    print("Objective-C deterministic tranche baseline files present; run make test for native validation")
+    print("Objective-C Foundation deterministic tranche baseline files present; run make test for native validation")
     return 0
 
 
