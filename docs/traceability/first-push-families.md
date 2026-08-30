@@ -1,6 +1,6 @@
 # First push families
 
-This local tranche ports the deterministic family-focus contract from the C-family small-runtime pattern into Objective-C.
+This tranche ports the deterministic family-focus contract from the C-family small-runtime pattern into Objective-C.
 
 | Family group | Objective-C path | Source reference | Parity class |
 | --- | --- | --- | --- |
@@ -10,4 +10,4 @@ This local tranche ports the deterministic family-focus contract from the C-fami
 | CLI contract | `src/main.m`, `tests/test_cli.sh` | `c-stakeholder/tests/test_cli.sh` smoke contract | deterministic |
 | experimental provider | `src/main.m`, `tests/test_cli.sh` | fail-fast provider policy in current deterministic repos | explicit fail-fast |
 
-Rust and Java remain canonical behavioral anchors; this Objective-C tranche is local-only and native-validated.
+Rust and Java remain canonical behavioral anchors; this Objective-C tranche is published and Foundation-native validated.

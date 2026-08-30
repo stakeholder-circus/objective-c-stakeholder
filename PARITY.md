@@ -1,16 +1,16 @@
 # Parity
 
-Parity classification: deterministic first tranche, native-validated local only.
+Parity classification: deterministic first tranche, Foundation-native validated and published.
 
 ## Implemented
 
 - Foundation-backed CLI flags: `--list-values`, `--focus-family`, `--output-format`, `--seed`, `--experimental-provider`.
-- Full Foundation normalized JSON event fields: `eventType`, `sequence`, `family`, `message`, `timestamp`, `context`, `generationProvenance`, `outputFormat`.
+- Normalized JSON event fields: `eventType`, `sequence`, `family`, `message`, `timestamp`, `context`, `generationProvenance`, `outputFormat`.
 - Full dedicated `classic-six + modern-core` family set.
 - Grouped fallback for later generator families.
 
 ## Deferred
 
-- Docker validation.
+- Linux Docker execution (`N/A unsupported` for the Apple Foundation lane).
 - Full live-provider/runtime support.
-- Publication governance.
+- Full program-family parity.
