@@ -6,9 +6,10 @@
 - Dedicated `classic-six + modern-core` families implemented.
 - Later families use explicit grouped fallback renderers.
 - Experimental provider flags fail fast.
+- Remote native, contract, dependency, and workflow-security CI is implemented.
 
 ## Remaining gaps
 
-- Docker validation is deferred for M1 resource safety.
+- Linux Docker execution is unsupported because the validated implementation links Apple Foundation. The native macOS lane is authoritative.
 - Full live-provider/runtime support is deferred to the provider rollout wave.
-- Remote publication and required-check binding are not started.
+- Required-check binding waits for the first stable hardened CI pass.

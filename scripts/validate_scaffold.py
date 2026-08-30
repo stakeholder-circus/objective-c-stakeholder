@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Validate Objective-C local deterministic tranche baseline file presence."""
+"""Validate Objective-C deterministic tranche baseline file presence."""
 
 from pathlib import Path
 
@@ -17,9 +17,12 @@ REQUIRED = [
     "scripts/validate_scaffold.py",
     "flake.nix",
     "Dockerfile",
+    ".github/dependabot.yml",
+    ".github/workflows/actionlint.yml",
     ".github/workflows/ci.yml",
     ".github/workflows/ci-native.yml",
-    ".github/workflows/docker-smoke.yml",
+    ".github/workflows/dependency-review.yml",
+    ".github/workflows/security-analysis.yml",
     "Makefile",
     "src/main.m",
     "tests/test_cli.sh",
@@ -32,7 +35,7 @@ def main() -> int:
         for path in missing:
             print(f"missing Objective-C deterministic tranche file: {path}")
         return 1
-    print("Objective-C Foundation deterministic tranche baseline files present; run make test for native validation")
+    print("Objective-C Foundation deterministic tranche files present; run make test for native validation")
     return 0
 
 

@@ -1,13 +1,34 @@
-name: Scaffold Native CI
+name: ci-native
 
 on:
+  workflow_dispatch:
   push:
   pull_request:
 
+permissions:
+  contents: read
+
 jobs:
-  scaffold:
-    runs-on: ubuntu-latest
+  foundation-native:
+    runs-on: macos-latest
+    timeout-minutes: 20
     steps:
-      - name: Scaffold-only status
-        run: |
-          echo "scaffold-only native CI placeholder; no deterministic runtime validation is claimed"
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Prove Apple clang toolchain
+        run: make compiler-proof
+      - name: Build and test Foundation runtime
+        run: make clean test
+
+  clang-static-analysis:
+    runs-on: macos-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Run Clang Static Analyzer
+        run: >-
+          clang --analyze -std=c17 -ObjC -Wall -Wextra -pedantic
+          src/main.m -framework Foundation
